@@ -2,13 +2,13 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-  This project is a web application that shows the weather in real time and after 5 days of different cities.
+This project is a web application that shows the weather in real time and after 5 days of different cities.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Prerequisites
 
-* npm
+- npm
   ```sh
   npm install npm@latest -g
   ```
@@ -24,16 +24,17 @@
    npm install
    ```
 3. Run app
-  ```sh
-   npm start
-   ```
+
+```sh
+ npm start
+```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Built With
 
-* [React.js](https://reactjs.org/)
-* [Material-UI](https://mui.com/)
-* [Prettier](https://prettier.iom)
+- [React.js](https://reactjs.org/)
+- [Material-UI](https://mui.com/)
+- [Prettier](https://prettier.iom)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
