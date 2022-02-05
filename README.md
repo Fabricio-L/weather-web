@@ -24,10 +24,9 @@ This project is a web application that shows the weather in real time and after 
    npm install
    ```
 3. Run app
-
-```sh
- npm start
-```
+  ```sh
+   npm start
+  ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
