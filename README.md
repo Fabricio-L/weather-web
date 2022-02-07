@@ -1,7 +1,5 @@
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
 This project is a web application that shows the weather in real time and after 5 days of different cities.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -9,9 +7,9 @@ This project is a web application that shows the weather in real time and after 
 ### Prerequisites
 
 - npm
-  ```sh
-  npm install npm@latest -g
-  ```
+   ```sh
+   npm install npm@latest -g
+   ```
 
 ### Installation
 
@@ -24,9 +22,9 @@ This project is a web application that shows the weather in real time and after 
    npm install
    ```
 3. Run app
-  ```sh
+   ```sh
    npm start
-  ```
+   ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
