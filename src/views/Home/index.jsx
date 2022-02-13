@@ -1,5 +1,12 @@
+import { Fragment } from "react"
+import Map from "../../components/map/Map"
+
 const Home = () => {
-  return <div>HOME</div>
+  return (
+    <Fragment>
+      <Map />
+    </Fragment>
+  )
 }
 
 export default Home

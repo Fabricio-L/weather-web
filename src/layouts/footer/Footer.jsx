@@ -9,9 +9,6 @@ const Footer = () => {
   return (
       <Box display={'flex'} className={classes.root}>
         <Typography variant='h5' flexGrow={1}>Weather Web App</Typography>
-          <div>
-              <LocationSearchingIcon />
-          </div>
       </Box>
   )
 }
