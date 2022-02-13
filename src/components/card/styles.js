@@ -9,7 +9,7 @@ const useStyles = makeStyles({
     top: '120px',
     left: '50px',
     backdropFilter: 'blur(5px)',
-    boxShadow: '3px 3px 4px #3f3f3f',
+    boxShadow: '1px 1px 10px #1a1a1a',
     borderRadius: '30px',
   },
 })

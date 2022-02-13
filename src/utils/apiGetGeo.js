@@ -1,4 +1,4 @@
-async function apiGet(params) {
+async function apiGetGeo(params) {
   try {
     let response = await fetch(
       `${process.env.REACT_APP_URL_GEO}?q=${params}&appid=${process.env.REACT_APP_TOKEN}`
@@ -10,4 +10,4 @@ async function apiGet(params) {
   }
 }
 
-export default apiGet
+export default apiGetGeo

@@ -6,7 +6,7 @@ import useStyles from './styles'
 
 const Map = () => {
   const classes = useStyles()
-  const coordinates = {lat: 0, lng: 0}
+  const coordinates = {lat: -37.339284, lng: -81.361661}
 
   const createMapOptions = () => {
     return {
@@ -97,9 +97,10 @@ const Map = () => {
     <Box className={classes.root}>
       <GoogleMapReact
         bootstrapURLKeys={{key: 'AIzaSyCoFGinNkNIiMGcIJk7A9c1X36qPTHL7Eo'}}
-        defaultCenter={coordinates}
+        defaultCenter={{lat: 0, lng: 0}}
         center={coordinates}
         defaultZoom={14}
+        zoom={4}
         options={createMapOptions}
         // onChange={}
         // onChildClick={}
