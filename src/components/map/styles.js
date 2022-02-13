@@ -2,7 +2,8 @@ import { makeStyles } from '@mui/styles'
 
 const useStyles = makeStyles({
   root: {
-    backgroundColor: 'grey',
+    width: '100%',
+    height: '87%',
   },
 })
 
