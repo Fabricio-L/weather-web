@@ -19,6 +19,8 @@ const useStyles = makeStyles({
   },
   description: {
     textTransform: 'capitalize',
+    marginRight: '5px',
+    marginLeft: '5px',
   },
   iconContainer: {
     display: 'flex',
@@ -32,7 +34,7 @@ const useStyles = makeStyles({
     background: '#7f7f7f24',
     margin: '10px',
     borderRadius: '6px',
-    padding: '10px 20px',
+    padding: '5px 20px',
   },
   dailyPart: {
     display: 'flex',
