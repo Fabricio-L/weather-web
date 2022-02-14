@@ -3,8 +3,8 @@ import apiGetWeather from '../utils/apiGetWeather'
 import apiGetForecast from '../utils/apiGetForecast'
 
 const useWeather = (lat, lng, query) => {
-  const [current, setCurrent] = useState([])
-  const [forecast, setForecast] = useState([])
+  const [current, setCurrent] = useState(null)
+  const [forecast, setForecast] = useState(null)
 
   useMemo(async () => {
     setCurrent(await apiGetWeather('Corrientes,AR'))
