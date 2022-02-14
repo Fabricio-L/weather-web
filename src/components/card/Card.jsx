@@ -3,7 +3,6 @@ import { Box, Grid, Typography } from '@mui/material'
 import useWeather from '../../hooks/useWeather'
 import useStyles from './styles'
 import GridItem from './GridItem'
-import WeatherIcon from './WeatherIcon'
 
 const Card = () => {
   const classes = useStyles()
@@ -15,6 +14,12 @@ const Card = () => {
   return (
     <Fragment>
       <Box className={classes.root}>
+        <Box className={classes.iconContainer}>
+          <img
+            src={`http://openweathermap.org/img/wn/${current?.weather[0].icon}@2x.png`}
+            atl={current?.weather[0].main}
+          />
+        </Box>
         <Box className={classes.cardContainer}>
           <Typography variant="h3">
             {Math.round(current?.main.temp)}ºC
@@ -28,10 +33,7 @@ const Card = () => {
             {current?.name}, {current?.sys.country}
           </Typography>
         </Box>
-        <Box>
-          <WeatherIcon />
-        </Box>
-        <Box>
+        <Box className={classes.dailyContainer}>
           <Grid container spacing={2} display={'contents'}>
             {forecast?.daily.length > 0 ? (
               forecast.daily.slice(0, 5).map((day, index) => (
@@ -39,6 +41,8 @@ const Card = () => {
                   <GridItem
                     temp={day.temp.day}
                     weather={day.weather[0].description}
+                    icon={day.weather[0].icon}
+                    main={day.weather[0].main}
                   />
                 </Grid>
               ))
