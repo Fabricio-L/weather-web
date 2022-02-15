@@ -1,17 +1,24 @@
 import { makeStyles } from '@mui/styles'
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
     position: 'fixed',
     width: '300px',
-    height: '540px',
+    height: '500px',
     top: '160px',
     left: '50px',
     backdropFilter: 'blur(5px)',
     boxShadow: '1px 1px 10px #1a1a1a',
     borderRadius: '15px',
+    [theme.breakpoints.down('md')]: {
+      top: '140px',
+      left: '0',
+      right: '0',
+      width: '100%',
+      height: '70%',
+    },
   },
   cardContainer: {
     textAlign: 'center',
@@ -53,6 +60,6 @@ const useStyles = makeStyles({
       borderRadius: '10px',
     },
   },
-})
+}))
 
 export default useStyles

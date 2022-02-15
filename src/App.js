@@ -14,7 +14,7 @@ const App = () => {
       <CityProvider>
         <ThemeProvider theme={darkTheme}>
           <CssBaseline />
-          <Box height={'100vh'}>
+          <Box height={'96vh'}>
             <Header />
             <Home />
             <Footer />
