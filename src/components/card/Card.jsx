@@ -17,7 +17,7 @@ const Card = () => {
         <Box className={classes.iconContainer}>
           <img
             src={`http://openweathermap.org/img/wn/${current?.weather[0].icon}@2x.png`}
-            atl={current?.weather[0].main}
+            alt={current?.weather[0].main}
           />
         </Box>
         <Box className={classes.cardContainer}>

@@ -1,7 +1,6 @@
 import React from 'react'
-import { AppBar, Toolbar, Typography, InputBase, Box } from '@mui/material'
+import { AppBar, Toolbar, Typography } from '@mui/material'
 import WbSunnyRoundedIcon from '@mui/icons-material/WbSunnyRounded'
-import LocationSearchingIcon from '@mui/icons-material/LocationSearching'
 import useStyles from './styles'
 
 const Header = () => {
@@ -9,7 +8,7 @@ const Header = () => {
 
   return (
     <AppBar position="static">
-      <Toolbar>
+      <Toolbar className={classes.root}>
         <WbSunnyRoundedIcon />
         <Typography variant="h5" flexGrow={1}>
           Weather

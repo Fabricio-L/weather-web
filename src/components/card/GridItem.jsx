@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import { Typography, Box } from '@mui/material'
 import ThermostatRoundedIcon from '@mui/icons-material/ThermostatRounded'
 import useStyles from './styles'
@@ -26,7 +25,7 @@ const GridItem = ({ temp, weather, icon, main, currentDate, day }) => {
       <Box className={classes.dailyPart}>
         <img
           src={`http://openweathermap.org/img/wn/${icon}@2x.png`}
-          atl={main}
+          alt={main}
           width={'40px'}
         />
         <Typography variant="h7">

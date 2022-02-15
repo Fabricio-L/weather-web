@@ -1,7 +1,7 @@
 import { makeStyles } from '@mui/styles'
 
 const useStyles = makeStyles({
-  searchContainer: {
+  root: {
     display: 'flex',
     alignItems: 'center',
   },
