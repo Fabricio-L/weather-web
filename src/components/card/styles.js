@@ -7,7 +7,7 @@ const useStyles = makeStyles({
     position: 'fixed',
     width: '300px',
     height: '540px',
-    top: '120px',
+    top: '160px',
     left: '50px',
     backdropFilter: 'blur(5px)',
     boxShadow: '1px 1px 10px #1a1a1a',
