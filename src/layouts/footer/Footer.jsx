@@ -22,11 +22,16 @@ const Footer = () => {
       </Box>
 
       <Typography variant="h7">Repository</Typography>
-      <img
-        src={github}
-        className={classes.imgFooter}
-        style={{ marginRight: '10px' }}
-      />
+      <a
+        href="https://github.com/Fabricio-L/weather-web/tree/master"
+        target="_blank"
+      >
+        <img
+          src={github}
+          className={classes.imgFooter}
+          style={{ marginRight: '10px' }}
+        />
+      </a>
     </Box>
   )
 }

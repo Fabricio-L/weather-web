@@ -6,7 +6,7 @@ import useStyles from './styles'
 const GridItem = ({ temp, weather, icon, main, currentDate, day }) => {
   const classes = useStyles()
   const date = new Date(
-    `${currentDate.getFullYear()}-${currentDate.getMonth()}-${
+    `${currentDate.getFullYear()}-${currentDate.getMonth() + 1}-${
       currentDate.getDate() + (day + 1)
     }`
   )
