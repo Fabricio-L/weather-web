@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Paper, Typography, Box } from '@mui/material'
+import { Box } from '@mui/material'
 import GoogleMapReact from 'google-map-react'
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined'
 import createMapOptions from './createMapOptions'
@@ -41,6 +41,7 @@ const Map = () => {
   }
 
   const handleSelectPlace = (e) => {
+    console.log(e)
     setIndexPlace(e)
   }
 
