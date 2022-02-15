@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import { Box, Grid, Typography } from '@mui/material'
-import WaterRoundedIcon from '@mui/icons-material/WaterRounded'
+import InvertColorsRoundedIcon from '@mui/icons-material/InvertColorsRounded'
 import CloudRoundedIcon from '@mui/icons-material/CloudRounded'
 import useWeather from '../../hooks/useWeather'
 import useStyles from './styles'
@@ -33,7 +33,7 @@ const Card = () => {
               {' '}
               {current?.clouds.all}% |
             </Typography>
-            <WaterRoundedIcon />
+            <InvertColorsRoundedIcon />
             <Typography className={classes.description}>
               {' '}
               {current?.main.humidity}%
@@ -52,7 +52,7 @@ const Card = () => {
           <Grid container spacing={2} display={'contents'}>
             {forecast?.daily.length > 0 ? (
               forecast.daily.slice(0, 5).map((day, index) => (
-                <Grid item xs={2} index={index} display={'contents'}>
+                <Grid item xs={2} key={index} display={'contents'}>
                   <GridItem
                     currentDate={date}
                     day={index}

@@ -1,18 +1,22 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useContext } from 'react'
+import { CityContext } from '../context/CityContext'
 import apiGetWeather from '../utils/apiGetWeather'
 import apiGetForecast from '../utils/apiGetForecast'
 
-const useWeather = (lat, lng, query) => {
+const useWeather = () => {
+  const context = useContext(CityContext)
   const [current, setCurrent] = useState(null)
   const [forecast, setForecast] = useState(null)
 
-  useMemo(async () => {
-    setCurrent(await apiGetWeather('Corrientes,AR'))
-  }, [])
+  console.log(context)
 
   useMemo(async () => {
-    setForecast(await apiGetForecast('-27.4806', '-58.8341'))
-  }, [])
+    setCurrent(await apiGetWeather(context.city.name))
+  }, [context.city])
+
+  useMemo(async () => {
+    setForecast(await apiGetForecast(context.city.lat, context.city.lng))
+  }, [context.city])
 
   return {
     current,

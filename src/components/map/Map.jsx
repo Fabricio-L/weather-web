@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { Box } from '@mui/material'
+import { CityContext } from '../../context/CityContext'
 import GoogleMapReact from 'google-map-react'
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined'
 import createMapOptions from './createMapOptions'
@@ -7,42 +8,18 @@ import useStyles from './styles'
 
 const Map = () => {
   const classes = useStyles()
+  const context = useContext(CityContext)
   const [coordinates, setCoordinates] = useState({
     lat: -37.339284,
     lng: -81.361661,
   })
-  const [indexPlace, setIndexPlace] = useState(0)
 
-  const listPlaces = [
-    {
-      lat: '-27.4806',
-      lng: '-58.8341',
-    },
-    {
-      lat: '-34.6132',
-      lng: '-58.3772',
-    },
-    {
-      lat: '-34.8335',
-      lng: '-56.1674',
-    },
-    {
-      lat: '-23.547',
-      lng: '-46.6361',
-    },
-    {
-      lat: '-12.0432',
-      lng: '-77.0282',
-    },
-  ]
+  useEffect(() => {
+    setCoordinates(context.city)
+  }, [context.city])
 
   const handleCoordinates = (e) => {
     setCoordinates({ lat: e.center.lat, lng: e.center.lng })
-  }
-
-  const handleSelectPlace = (e) => {
-    console.log(e)
-    setIndexPlace(e)
   }
 
   return (
@@ -55,13 +32,10 @@ const Map = () => {
         zoom={4}
         options={createMapOptions}
         onChange={handleCoordinates}
-        onChildClick={handleSelectPlace}
       >
-        {listPlaces.map((place, index) => (
-          <div lat={place.lat} lng={place.lng} key={index}>
-            <LocationOnOutlinedIcon />
-          </div>
-        ))}
+        <div lat={coordinates.lat} lng={coordinates.lng}>
+          <LocationOnOutlinedIcon />
+        </div>
       </GoogleMapReact>
     </Box>
   )
